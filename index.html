@@ -1,10 +1,127 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <title>포트폴리오</title>
-  </head>
-  <body>
-    <h1>안녕하세요!!</h1>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>포트폴리오 - About Me</title>
+  <style>
+    body {
+      font-family: "Arial", sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 40px;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      gap: 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .profile {
+      flex-shrink: 0;
+    }
+
+    .profile img {
+      width: 220px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .content {
+      flex: 1;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #0d1b2a;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-top: 25px;
+      margin-bottom: 10px;
+      color: #1b263b;
+    }
+
+    p, li {
+      line-height: 1.6;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .icon {
+      margin-right: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- 프로필 사진 -->
+    <div class="profile">
+      <img src="profile.jpg" alt="Profile Photo" />
+    </div>
+
+    <!-- 소개 내용 -->
+    <div class="content">
+      <h1>ABOUT ME</h1>
+
+      <!-- 학력 -->
+      <div class="section">
+        <h2>🎓 학력</h2>
+        <p>경동대학교 소프트웨어학과 졸업 (2021.03 ~ 2025.02)</p>
+      </div>
+
+      <!-- 기술 스택 -->
+      <div class="section">
+        <h2>💻 기술 스택</h2>
+        <p><strong>Frontend:</strong> React, React Native, JavaScript (ES6+), Styled-components</p>
+        <p><strong>Backend:</strong> Spring Boot, Java, Node.js, RESTful API, MySQL, Firebase</p>
+        <p><strong>DevOps & Deployment:</strong> AWS (S3, Route53, CloudFront, Elastic Beanstalk), GitHub Pages</p>
+        <p><strong>Tooling & Collaboration:</strong> Git, GitHub, Postman, VSCode</p>
+      </div>
+
+      <!-- 핵심 기술 -->
+      <div class="section">
+        <h2>🛠 핵심 기술</h2>
+        <ul>
+          <li>JavaScript, Node.js 중심 풀스택 개발 프로젝트 수행</li>
+          <li>React 기반 UI 개발 및 Spring Boot REST API 구축</li>
+          <li>Firebase & MySQL을 이용한 데이터 관리 및 인증 처리</li>
+        </ul>
+      </div>
+
+      <!-- 배포 경험 -->
+      <div class="section">
+        <h2>☁️ 배포 경험</h2>
+        <p>AWS S3 + Route53 + CloudFront를 활용하여 정적 웹 배포, 도메인 연결, HTTPS 인증서 적용까지 직접 구성</p>
+      </div>
+
+      <!-- 교육 -->
+      <div class="section">
+        <h2>📚 교육</h2>
+        <p>AWS 클라우드를 활용한 풀스택 개발 | 코리아IT아카데미 (2025.02 ~ 2025.08)</p>
+        <p>JAVA, JSP, Spring, SpringBoot, JavaScript 기반 프로젝트 진행</p>
+      </div>
+
+      <!-- 각오 -->
+      <div class="section">
+        <h2>✍️ 각오</h2>
+        <p>문제를 피하지 않고 끝까지 해결해내는 개발자가 되겠습니다. 실제 사용자에게 전달되는 서비스 품질을 가장 중요하게 생각합니다.</p>
+      </div>
+    </div>
+  </div>
+</body>
 </html>
