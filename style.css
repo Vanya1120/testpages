@@ -59,37 +59,6 @@ nav a:hover {
   color: #222;
 }
 
-.portfolio-list {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.portfolio-card {
-  flex: 1 1 40%;
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.portfolio-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.portfolio-card h3 {
-  margin-top: 0;
-  color: #111;
-}
-
-.portfolio-card p {
-  font-size: 14px;
-  color: #555;
-}
-
 .buttons {
   margin-top: 15px;
 }
@@ -131,31 +100,107 @@ footer a:hover {
   gap: 12px;
 }
 
-.section .tech-btn {
-  flex: 1 1 calc(16.66% - 12px);
-  min-width: 120px;
-  background: #f9f9f9;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 8px;
-  text-align: center;
+.section details {
+  flex: unset;
+  min-width: unset;
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  text-align: left;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: normal;
 }
 
+
 .section .tech-desc {
-  display: none;
-  flex: 1 1 100%;
-  margin-top: 8px;
+  margin-top: 20px;
   padding: 12px;
   background: #eee;
   border-left: 4px solid #333;
+  font-size: 14px;
+  color: #000;
 }
 
-#html:checked ~ .tech-desc:nth-of-type(1),
-#css:checked ~ .tech-desc:nth-of-type(2),
-#js:checked ~ .tech-desc:nth-of-type(3),
-#react:checked ~ .tech-desc:nth-of-type(4),
-#next:checked ~ .tech-desc:nth-of-type(5) {
-  display: block;
+.portfolio-list {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 20px;
+}
+
+.portfolio-info,
+.portfolio-image {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 설명 카드 */
+.portfolio-info {
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.portfolio-info h3 {
+  margin-top: 0;
+  color: #111;
+}
+.portfolio-info p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* 이미지 카드 */
+.portfolio-image img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+.portfolio-image img:hover {
+  transform: scale(0.95);
+}
+
+/* 모달 배경 */
+.modal {
+  display: none; /* 기본은 안 보이게 */
+  position: fixed; /* 화면 전체 덮기 */
+  z-index: 1000; /* 제일 위에 올라오게 */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* 내용 길어지면 스크롤 */
+  background-color: rgba(0, 0, 0, 0.7); /* 반투명 검정 배경 */
+}
+
+/* 모달 박스 */
+.modal-content {
+  background: #fff;
+  margin: 10% auto; /* 위에서 10% 떨어지고, 가운데 정렬 */
+  padding: 20px;
+  border-radius: 12px;
+  width: 60%; /* 너비 조정 가능 */
+  max-width: 600px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease; /* 등장 애니메이션 */
+}
+
+/* 닫기 버튼 */
+.close {
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* 닫기 버튼 hover */
+.close:hover {
+  color: red;
+}
+
+/* 등장 애니메이션 */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }

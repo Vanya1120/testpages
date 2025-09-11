@@ -2,6 +2,8 @@
 <html lang="ko">
 <head>
   <link rel="stylesheet" href="style.css">
+  <script src="js/stack.js"></script>
+  <script src="js/portfolio.js"></script>
   <meta charset="UTF-8" />
   <title>포트폴리오</title>
 </head>
@@ -15,8 +17,7 @@
   </header>
 
   <div class="container">
-    <div class="profile">
-    </div>
+    <div class="profile"></div>
 
     <div class="content" id="about">
       <h1>자기 소개</h1>
@@ -29,124 +30,104 @@
       <div class="section">
         <h2>기술 스택</h2>
 
-        <h3>Frontend</h3>
-        <div class="tech-grid">
-          <details>
-            <summary>HTML</summary>
-            <p>HTML 설명</p>
-          </details>
-          <details>
-            <summary>CSS</summary>
-            <p>CSS 설명</p>
-          </details>
-          <details>
-            <summary>JavaScript</summary>
-            <p>JavaScript 설명</p>
-          </details>
-          <details>
-            <summary>React</summary>
-            <p>React 설명</p>
-          </details>
-          <details>
-            <summary>Next.js</summary>
-            <p>Next.js 설명</p>
-          </details>
-          <details>
-            <summary>Styled-Components</summary>
-            <p>Styled-Components 설명</p>
-          </details>
+        <h3 id="frontend">Frontend</h3>
+        <div id="grid-frontend" class="tech-grid"> 
+          <details data-desc="HTML 설명"><summary>HTML</summary></details>
+          <details data-desc="CSS 설명"><summary>CSS</summary></details>
+          <details data-desc="JavaScript 설명"><summary>JavaScript</summary></details>
+          <details data-desc="React 설명"><summary>React</summary></details>
+          <details data-desc="Next.js 설명"><summary>Next.js</summary></details>
+          <details data-desc="Styled-Components 설명"><summary>Styled-Components</summary></details>
         </div>
-        
+        <div id="desc-frontend" class="tech-desc" style="display: block;"></div>
 
-        <h3>Backend</h3>
-        <div class="tech-grid">
-          <details>
-            <summary>JAVA</summary>
-            <p>JAVA 설명</p>
-          </details>
-          <details>
-            <summary>Spring Boot</summary>
-            <p>Spring Boot 설명</p>
-          </details>
-          <details>
-            <summary>JPA</summary>
-            <p>JPA 설명</p>
-          </details>
-          <details>
-            <summary>Node.js</summary>
-            <p>Node.js 설명</p>
-          </details>
-          <details>
-            <summary>JWT</summary>
-            <p>JWT 설명</p>
-          </details>
+        <h3 id="backend">Backend</h3>
+        <div id="grid-backend" class="tech-grid">
+          <details data-desc="JAVA 설명"><summary>JAVA</summary></details>
+          <details data-desc="Spring Boot 설명"><summary>Spring Boot</summary></details>
+          <details data-desc="JPA 설명"><summary>JPA</summary></details>
+          <details data-desc="Node.js 설명"><summary>Node.js</summary></details>
+          <details data-desc="JWT 설명"><summary>JWT</summary></details>
         </div>
-        
+        <div id="desc-backend" class="tech-desc" style="display: block;"></div>
 
-        <h3>Database</h3>
-        <div class="tech-grid">
-          <details>
-            <summary>MySQL</summary>
-            <p>MySQL 설명</p>
-          </details>
-          <details>
-            <summary>DBeaver</summary>
-            <p>DBeaver 설명</p>
-          </details>
-          <details>
-            <summary>Redis</summary>
-            <p>Redis 설명</p>
-          </details>
+        <h3 id="database">Database</h3>
+        <div id="grid-database" class="tech-grid">
+          <details data-desc="MySQL 설명"><summary>MySQL</summary></details>
+          <details data-desc="DBeaver 설명"><summary>DBeaver</summary></details>
+          <details data-desc="Redis 설명"><summary>Redis</summary></details>
         </div>
+        <div id="desc-database" class="tech-desc" style="display: block;"></div>
 
-        <h3>Infra0 & DevOps</h3>
-        <p>AWS (EC2), Docker, Nginx, GitHub Actions (CI/CD)</p>
+        <h3 id="infra">Infra & DevOps</h3>
+        <div id="grid-infra" class="tech-grid">
+          <details data-desc="AWS (EC2) 설명"><summary>AWS (EC2)</summary></details>
+          <details data-desc="Docker 설명"><summary>Docker</summary></details>
+          <details data-desc="Nginx 설명"><summary>Nginx</summary></details>
+          <details data-desc="GitHub Actions 설명"><summary>GitHub Actions (CI/CD)</summary></details>
+        </div>
+        <div id="desc-infra" class="tech-desc" style="display: block;"></div>
 
-        <h3>협업 & 기타</h3>
-        <p>Git, GitHub, Notion, Slack</p>
+        <h3 id="collab">협업 & 기타</h3>
+        <div id="grid-collab" class="tech-grid">
+          <details data-desc="Git 설명"><summary>Git</summary></details>
+          <details data-desc="GitHub 설명"><summary>GitHub</summary></details>
+          <details data-desc="Notion 설명"><summary>Notion</summary></details>
+          <details data-desc="Slack 설명"><summary>Slack</summary></details>
+        </div>
+        <div id="desc-collab" class="tech-desc" style="display: block;"></div>
       </div>
+    
+    <section id="portfolio" class="section">
+      <h2>포트폴리오 소개</h2>
+      <div class="portfolio-list">
 
-      <section id="portfolio" class="section">
-        <h2>포트폴리오 소개</h2>
-        <div class="portfolio-list">
-
-          <div class="portfolio-card">
-            <h3>맹글맹글</h3>
-            <p>AI가 영화 속 캐릭터처럼 대화하며 새로운 이야기를 만들어가는 서비스</p>
-            <div class="buttons">
-              <a href="https://maengle.xyz" class="btn">맹글맹글</a>
-            </div>
-          </div>
-
-          <div class="portfolio-card">
-            <h3>vinllage</h3>
-            <p>AI 쓰레기 인식 분리배출 가이드 서비스</p>
-            <div class="buttons">
-              <a href="https://vinllage.xyz" class="btn">vinllage</a>
-            </div>
-          </div>
-
+        <div class="portfolio-info" data-project="maengle">
+          <h3>맹글맹글</h3>
+          <p>AI가 영화 속 캐릭터처럼 대화하며 새로운 이야기를 만들어가는 서비스</p>
+          <p>담당 업무 : AI 챗봇 관리자 페이지</p>
+          <p>개발 기간 : 25. 07 ~ 25. 08</p>
         </div>
-      </section>
+        <div class="portfolio-image">
+          <a href="https://maengle.xyz" target="_blank">
+            <img src="images/maengle.png" alt="맹글맹글 미리보기">
+          </a>
+        </div>
 
+        <div class="portfolio-info" data-project="vinllage">
+          <h3>vinllage</h3>
+          <p>AI 쓰레기 인식 분리배출 가이드 서비스</p>
+          <p>담당 업무 : 결과 페이지</p>
+          <p>개발 기간 : 25. 08 ~ 25. 09</p>
+        </div>
+        <div class="portfolio-image">
+          <a href="https://vinllage.xyz" target="_blank">
+            <img src="images/vinllage.png" alt="vinllage 미리보기">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div id="portfolio-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modal-title"></h2>
+        <ul>
+          <li><strong>개발 기간:</strong> <span id="modal-period"></span></li>
+          <li><strong>나의 역할:</strong> <span id="modal-role"></span></li>
+          <li><strong>기술적 차별점:</strong> <span id="modal-diff"></span></li>
+          <li><strong>문제 해결 사례:</strong> <span id="modal-solution"></span></li>
+          <li><strong>사용 기술 스택:</strong> <span id="modal-stack"></span></li>
+        </ul>
+      </div>
     </div>
+
+
     <footer>
       <p>Phone: 010-9526-5587</p>
       <p>Email: oks001120@naver.com</p>
       <p>GitHub: <a href="https://github.com/Vanya1120">github.com/Vanya1120</a></p>
-  </footer>
+    </footer>
   </div>
-  <script>
-  document.querySelectorAll(".tech-grid details").forEach((detail) => {
-    detail.addEventListener("toggle", function () {
-      if (this.open) {
-        // 다른 모든 details 닫기
-        document.querySelectorAll(".tech-grid details").forEach((el) => {
-          if (el !== this) el.open = false;
-        });
-      }
-    });
-  });
-</script>
 </body>
 </html>
