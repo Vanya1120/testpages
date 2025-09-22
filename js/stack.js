@@ -17,10 +17,10 @@ document.addEventListener("DOMContentLoaded", () => {
           detailsList.forEach((other) => {
             if (other !== d) other.open = false;
           });
-          descBox.textContent = d.dataset.desc || "설명 없음";
+          descBox.innerHTML = d.dataset.desc || "설명 없음";
         } else {
           const anyOpen = Array.from(detailsList).some((x) => x.open);
-          if (!anyOpen) descBox.textContent = "";
+          if (!anyOpen) descBox.innerHTML = "";
         }
       });
     });

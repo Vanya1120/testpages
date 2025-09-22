@@ -76,6 +76,15 @@ nav a:hover {
   background: #555;
 }
 
+.tech-desc {
+  white-space: pre-line;
+  margin-top: 20px;
+  padding: 12px;
+  background: #eee;
+  border-left: 4px solid #333;
+  font-size: 14px;
+  color: #000;
+}
 footer {
   background: #111;
   color: #ccc;
