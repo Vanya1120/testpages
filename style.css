@@ -92,6 +92,8 @@ footer {
   padding: 20px 0;
   margin-top: 50px;
   font-size: 14px;
+  width: 100%;
+  max-width: 100%;
 }
 
 footer a {
@@ -159,11 +161,14 @@ footer a:hover {
   color: #555;
 }
 
+.portfolio-info,
 .portfolio-image img {
   max-width: 100%;
   height: auto;
   transition: transform 0.2s ease;
 }
+
+.portfolio-info:hover,
 .portfolio-image img:hover {
   transform: scale(0.95);
 }
