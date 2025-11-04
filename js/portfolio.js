@@ -12,21 +12,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const projectData = {
     maengle: {
       title: "맹글맹글",
-      feature: "회원: 챗봇과 대화, 게시글 작성, 마이페이지 이용 관리자: 회원 관리, 게시판 관리, 모델(상품) 관리 마이페이지에서 본인 게시글 확인 및 최근 작성글 5개 열람 가능 개발자가 등록한 챗봇 모델을 기반으로, 관리자는 이미지를 추가해 서비스 형태로 제공 가능",
-      role: "마이페이지, 챗봇도메인",
-      solution: "프로필 이미지 삭제 후 재등록이 되지 않던 문제를 JS로 버튼/상태를 동적으로 관리해 해결(등록·삭제 토글, 유효성 처리) AI 서버의 높은 리소스 요구로 AWS 단독 배포가 어려워 내부 서버 포트포워딩(리버스 프록시)으로 서비스 연결",
-      stack: "React, Next.js, Styled-Components, OpenAI API, WebSocket",
+      feature: "챗봇과 대화, 게시글 작성, 마이페이지 이용",
+      role: "관리자 페이지 - 챗봇 관리",
+      solution: "AI 서버의 높은 리소스 요구로 AWS 단독 배포가 어려워 내부 서버 포트포워딩으로 서비스 연결",
+      stack: "Spring Boot, HTML5, CSS3, MySQL, JPA/Hibernate, Python, Docker, AWS",
       period: "2025.07 ~ 2025.08",
-      github: "maengle-front"
+      github: "https://github.com/Team2-chatBoard/chatboard"
     },
     vinllage: {
       title: "vinllage",
       feature: "AI 이미지 인식 기반 분리배출 가이드 제공",
-      role: "결과 페이지 및 이미지 분류 로직 구현",
-      solution: "대용량 이미지 처리 속도 개선 (Redis 캐싱)",
-      stack: "Spring Boot, JPA, MySQL, Redis, AWS EC2, Docker",
+      role: "결과 페이지 (인식된 쓰레기 종류 및 분리배출 가이드 제공)",
+      solution: "",
+      stack: "React, Next.js, TypeScript, CSS3, Spring Boot, JPA/Hibernate, REST API, MySQL, Java, Python, Docker, AWS",
       period: "2025.08 ~ 2025.09",
-      github: "Vinllage"
+      github: "https://github.com/vinllage"
     },
   };
 
