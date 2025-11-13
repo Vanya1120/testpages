@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "vinllage",
       feature: "AI 이미지 인식 기반 분리배출 가이드 제공",
       role: "결과 페이지 (인식된 쓰레기 종류 및 분리배출 가이드 제공)",
-      solution: "",
+      solution: "초기 결과 페이지에서 인식된 쓰레기 종류를 단순 텍스트로만 표시하여 이해도가 낮은 점을 피드백하여 분리배출 가이드를 추가하여 사용자 이해를 높임,",
       stack: "React, Next.js, TypeScript, CSS3, Spring Boot, JPA/Hibernate, REST API, MySQL, Java, Python, Docker, AWS",
       period: "2025.08 ~ 2025.09",
       github: "https://github.com/vinllage"
